@@ -34,7 +34,12 @@ const Main = () => {
           <div className="userdata">
             {userData.map((data) => {
               return (
-                <ListData key={data.id} name={data.userName} age={data.age} />
+                <ListData
+                  key={data.id}
+                  name={data.userName}
+                  age={data.age}
+                  college={data.collegename}
+                />
               );
             })}
           </div>

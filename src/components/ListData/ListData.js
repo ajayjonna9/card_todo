@@ -5,7 +5,7 @@ const ListData = (props) => {
   return (
     <div>
       <h3 className="data">
-        {props.name} ({props.age} Years old)
+        {props.name} ({props.age} Years old) ({props.college})
       </h3>
     </div>
   );
