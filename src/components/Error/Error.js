@@ -1,10 +1,10 @@
 import React from "react";
 import "./Error.css";
 import Button from "../Button/Button";
-const Error = (props) => {
-  console.log(props.errmsg);
+import ReactDOM from "react-dom";
+const ErrorElement = (props) => {
   return (
-    <div className="error ">
+    <div className="error">
       <div className="card">
         <header>Somthing went wrong</header>
         <div className="errmsg">
@@ -16,6 +16,16 @@ const Error = (props) => {
         </div>
       </div>
     </div>
+  );
+};
+const Error = (props) => {
+  return (
+    <React.Fragment>
+      {ReactDOM.createPortal(
+        <ErrorElement seterror={props.seterror} errmsg={props.errmsg} />,
+        document.getElementById("root1")
+      )}
+    </React.Fragment>
   );
 };
 
