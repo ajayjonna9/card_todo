@@ -1,0 +1,12 @@
+.userdata {
+  text-align: center;
+  background-color: white;
+
+  width: 600px;
+
+  margin: auto;
+  border-radius: 15px;
+  border: 1px solid red;
+
+  margin-top: 20px;
+}
